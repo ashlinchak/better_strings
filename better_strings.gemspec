@@ -6,11 +6,11 @@ require 'better_strings/version'
 Gem::Specification.new do |spec|
   spec.name          = "better_strings"
   spec.version       = BetterStrings::VERSION
-  spec.authors       = ["Minotep"]
+  spec.authors       = ["Alexandr Shlinchak"]
   spec.email         = ["minotep@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{This is a gem for adding more functionality for Ruby String class}
+  spec.description   = %q{Add new features for String class}
+  spec.homepage      = "https://github.com/ashlinchak/better_strings"
   spec.license       = "MIT"
 
   spec.files = `git ls-files -z`.split("\x0")
