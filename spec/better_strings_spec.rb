@@ -27,4 +27,13 @@ describe BetterStrings do
 		end
 
 	end
+
+	describe '#words' do
+		s = "Lorem ipsum dolor sit amet, id"
+		result = %w{Lorem ipsum dolor sit amet id}
+
+		it "get words from string" do
+			expect(s.words).to  match_array(result)
+		end
+	end
 end

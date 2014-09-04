@@ -2,11 +2,20 @@ module BetterStrings
 	module	Extensions
 		# These methods are all icluded in  the String class.
 		module PublicInstanceMethods
+			# Get words from string
+			#
+			#   s = "word_1 word_2 word_2"
+			#   s.words
+			#   => {"word_1", "word_2", "word_2"}
+			def words
+				gsub(/[!?,.]/,' ').split(/\s+/)
+			end 
+
 			# Count inuque words in the String object and return Hash.
 			#
 			#   s = "word_1 word_2 word_2"
 			#   s.count_words
-			#   => {"word_1" => 1, "word_2" }
+			#   => {"word_1" => 1, "word_2" => 2 }
 			def count_words
 				words = Hash.new(0)
 				downcase.scan(/\w+/) { |word| words[word] += 1 }
