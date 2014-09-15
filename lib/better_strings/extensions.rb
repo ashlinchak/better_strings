@@ -6,7 +6,7 @@ module BetterStrings
 			#
 			#   s = "word_1 word_2 word_2"
 			#   s.words
-			#   => {"word_1", "word_2", "word_2"}
+			#   => ["word_1", "word_2", "word_2"]
 			def words
 				gsub(/[!?,.]/,' ').split(/\s+/)
 			end 
@@ -20,7 +20,25 @@ module BetterStrings
 				words = Hash.new(0)
 				downcase.scan(/\w+/) { |word| words[word] += 1 }
 				return words
-			end 
+			end
+
+			# Get biggest word from string.
+			#
+			#   s = "word word_1"
+			#   s.biggest_word
+			#   => ["word_1"]
+			def biggest_word
+				words.group_by(&:size).max.last
+			end
+
+			# Get smallest word from string.
+			#
+			#   s = "word word_1"
+			#   s.smallest_word
+			#   => ["word"]
+			def smallest_word
+				words.group_by(&:size).min.last
+			end
 			
 		end
 

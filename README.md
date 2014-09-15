@@ -6,19 +6,21 @@ This is a gem for adding more functionality for Ruby String class
 
 Add this line to your application's Gemfile:
 
-    gem 'better_strings'
+``` ruby
+gem 'better_strings'
+```
 
 And then execute:
 
-    $ bundle
+```
+$ bundle
+```
 
 Or install it yourself as:
-
-    $ gem install better_strings
-
-## Usage
-
-TODO: Write usage instructions here
+    
+```
+$ gem install better_strings
+```
 
 ## Contributing
 

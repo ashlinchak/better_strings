@@ -36,4 +36,22 @@ describe BetterStrings do
 			expect(s.words).to  match_array(result)
 		end
 	end
+
+	describe '#biggest_word' do
+		s = "Lorem ipsum dolor sit amet, id"
+		result = ["Lorem", "ipsum", "dolor"]
+
+		it "get biggest word from string" do
+			expect(s.biggest_word).to  match_array(result)
+		end
+	end
+
+	describe '#smallest_word' do
+		s = "Lorem ipsum dolor sit amet, id"
+		result = ["id"]
+
+		it "get smallest word from string" do
+			expect(s.smallest_word).to  match_array(result)
+		end
+	end
 end
